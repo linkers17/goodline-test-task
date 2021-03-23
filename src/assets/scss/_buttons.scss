@@ -1,0 +1,41 @@
+.btn {
+    padding: 2rem;
+    @include robotoCondensed(700);
+    font-size: 2.2rem;
+    color: #fff;
+    background-color: #72bf44;
+    text-transform: uppercase;
+    border: none;
+    position: relative;
+    border-radius: 4px;
+    transition: 0.3s;
+
+    &:hover {
+        box-shadow: $box-shadow;
+    }
+
+    &:disabled {
+        cursor: default;
+        background-color: $normalColor;
+
+        &:hover {
+            box-shadow: none;
+        }
+
+        &:after {
+            display: none;
+        }
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 93.5%;
+        background-color: #009810;
+        border-radius: 0 0 4px 4px;
+        height: 8px;
+    }
+}

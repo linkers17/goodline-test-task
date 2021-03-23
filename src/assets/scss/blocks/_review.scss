@@ -1,0 +1,186 @@
+.review {
+    margin-bottom: 19rem;
+
+    @include c995-block {
+        margin-bottom: 12px;
+    }
+
+    @include c575-block {
+        display: none;
+    }
+
+    &__slider {
+        margin-top: 7rem;
+
+        &-card {
+            box-sizing: border-box;
+            max-width: 560px;
+            width: 560px;
+            padding: 3rem 3rem 2rem 3rem;
+
+            @include c767-block {
+                width: 90%;
+            }
+
+            &__wrapper {
+                display: flex;
+                margin-bottom: 2rem;
+            }
+
+            &__avatar {
+                position: relative;
+                box-sizing: border-box;
+                padding: 2px;
+                border-radius: 50%;
+                height: 86px;
+                width: 86px;
+                border: 1px solid #fff;
+                margin-right: 3rem;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    box-sizing: border-box;
+                    height: calc(100% + 10px);
+                    width: calc(100% + 10px);
+                    border: 1px solid rgba(#fff, 0.5);
+                    border-radius: 50%;
+                    top: -5px;
+                    left: -5px;
+                }
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    box-sizing: border-box;
+                    height: calc(100% + 20px);
+                    width: calc(100% + 20px);
+                    border: 1px solid rgba(#fff, 0.25);
+                    border-radius: 50%;
+                    top: -10px;
+                    left: -10px;
+                }
+            }
+
+            &__img {
+                display: block;
+                width: 100%;
+                height: auto;
+                border-radius: 50%;
+            }
+
+            &__text {
+                margin-top: 3rem;
+                max-width: 385px;
+
+                @include c767-block {
+                    flex-basis: 70%;
+                }
+            }
+
+            &__name {
+                display: inline-block;
+                font-size: 1.8rem;
+                font-weight: 400;
+                margin-bottom: 2rem;
+            }
+
+            &__message {
+                line-height: 1.2;
+            }
+
+            &__btn {
+                display: block;
+                margin: auto;
+                border: none;
+                background-color: transparent;
+
+                &:hover {
+                    .review__slider-card__icon {
+                        fill: darken(#fff, 20%);
+                    }
+                }
+            }
+
+            &__icon {
+                width: 24px;
+                height: 24px;
+                fill: #fff;
+                transition: 0.3s;
+            }
+        }
+    }
+}
+
+.slider {
+    position: relative;
+
+    &__item {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%) scale3d(0.8, 0.8, 0.2);
+        top: -80px;
+        opacity: 0.25;
+        transform-origin: bottom;
+        z-index: 1;
+
+        &_current {
+            z-index: 100;
+            opacity: 1;
+            top: 0;
+            transform: translateX(-50%) scale3d(1, 1, 1);
+
+            &.animate {
+                animation: current-animate 0.4s ease-in 0s forwards;
+            }
+        }
+
+        &_next {
+            z-index: 50;
+
+            &.animate {
+                animation: next-animate 0.4s ease 0.2s forwards;
+            }
+        }
+    }
+
+    &__hide {
+        position: relative;
+        opacity: 0;
+        transform: translateX(-50%) scale3d(1, 1, 1);
+        top: 0;
+    }
+}
+
+@keyframes current-animate {
+    0% {
+        transform: translateX(-50%) scale3d(1, 1, 1);
+    }
+
+    50% {
+        transform: translateX(-50%) scale3d(1, 1, 1) rotateX(70deg);
+    }
+
+    100% {
+        transform: translateX(-50%) scale3d(0.8, 0.8, 0.2);
+        top: -80px;
+        opacity: 0.25;
+        z-index: 1;
+    }
+}
+
+@keyframes next-animate {
+    0% {
+        transform: translateX(-50%) scale3d(0.8, 0.8, 0.2);
+        top: -80px;
+        opacity: 0.25;
+        z-index: 1;
+    }
+
+    100% {
+        transform: translateX(-50%) scale3d(1, 1, 1);
+        top: 0;
+        opacity: 1;
+        z-index: 100;
+    }
+}

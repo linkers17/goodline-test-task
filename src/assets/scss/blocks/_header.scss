@@ -1,0 +1,130 @@
+.header {
+    padding: 4rem 0;
+
+    @include c767-block {
+        padding: 0;
+    }
+
+    @include c575-block {
+        margin-bottom: 1.5rem;
+    }
+
+    .container {
+        @include c767-block {
+            width: 100%;
+        }
+    }
+
+    .row {
+        @include c767-block {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+
+    &__wrapper {
+        @include col();
+        @include size(12);
+        background: url('../images/header.jpg') no-repeat;
+        background-size: cover;
+        width: 100%;
+        padding: 4rem 4.5rem 4.5rem 4.5rem;
+        border-radius: 1.8rem;
+
+        @include c995-block {
+            background-position: center;
+        }
+
+        @include c767-block {
+            margin-left: 0;
+            margin-right: 0;
+            padding: 1.4rem;
+            border-radius: 0;
+        }
+
+        &-content {
+            max-width: 265px;
+
+            @include c995-block {
+                width: 240px;
+            }
+
+            @include c575-block {
+                width: 167px;
+            }
+
+            @include c479-block {
+                width: 125px;
+            }
+
+            &__title-block {
+                display: flex;
+                align-items: center;
+                margin-bottom: 11rem;
+
+                @include c767-block {
+                    margin-bottom: 8rem;
+                }
+
+                @include c575-block {
+                    margin-bottom: 5rem;
+                }
+
+                @include c479-block {
+                    margin-bottom: 3.6rem;
+                }
+    
+                &__logo {
+                    display: block;
+                    margin-right: 2rem;
+
+                    @include c575-block {
+                        margin-right: 1rem;
+                    }
+
+                    @include c479-block {
+                        margin-right: 0.7rem;
+                        width: 23px;
+                        height: auto;
+                    }
+                }
+    
+                &__header {
+                    font-size: 3rem;
+                    line-height: 1.1;
+
+                    @include c995-block {
+                        font-size: 2.5rem;
+                    }
+
+                    @include c767-block {
+                        font-size: 2.2rem;
+                    }
+
+                    @include c575-block {
+                        font-size: 1.6rem;
+                    }
+
+                    @include c479-block {
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+
+            &__text-block {
+                font-size: inherit;
+                line-height: 1.15;
+
+                @include c995-block {
+                    font-size: 1.6rem;
+                }
+
+                @include c479-block {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+
+        
+    }
+}

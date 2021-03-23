@@ -1,0 +1,141 @@
+.buy {
+    margin-bottom: 4rem;
+
+    @include c575-block {
+        margin-bottom: 2.5rem;
+    }
+
+    @include c479-block {
+        margin-bottom: 3px;
+    }
+    
+    &__list {
+        @include row-flex();
+    }
+
+    &__card {
+        @include col();
+        @include size(3);
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 0;
+        text-align: center;
+        justify-content: flex-end;
+
+        @include c767-block {
+            margin-left: auto;
+            margin-right: auto;
+            width: 255px;
+            height: 255px;
+            margin-top: 2.5rem;
+        }
+
+        @include c575-block {
+            width: 200px;
+            height: 200px;
+        }
+
+        @include c479-block {
+            width: 160px;
+            height: 160px;
+            margin-top: 2.4rem;
+            padding: 1.3rem 0;
+            box-shadow: 0 10px 30px $shadowColor;
+        }
+
+        &:first-child {
+            @include c767-block {
+                order: 10;
+            }
+
+            @include c479-block {
+                box-shadow: none;
+            }
+        }
+
+        &:nth-child(2) {
+            order: 0;
+            margin-top: 0;
+        }
+
+        &:nth-child(3) {
+            margin-top: 0;
+        }
+
+        &-images-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            @include c995-block {
+                margin-bottom: 1rem;
+            }
+
+            &__row {
+                display: flex;
+                justify-content: center;
+
+                &:not(:last-child) {
+                    margin-bottom: 1.3rem;
+                }
+
+                &-img {
+
+                    @include c995-block {
+                        width: 23%;
+                        height: auto;
+                    }
+
+                    @include c767-block {
+                        width: auto;
+                    }
+
+                    @include c575-block {
+                        width: 17%;
+                    }
+
+                    @include c479-block {
+                        width: 15%;
+                    }
+
+                    &:not(:last-child) {
+                        margin-right: 1.6rem;
+                    }
+                }
+            }
+        }
+
+        &-title {
+            line-height: 1.2;
+
+            @include c995-block {
+                font-size: 1.5rem;
+            }
+
+            @include c767-block {
+                font-size: 2rem;
+            }
+
+            &_small {
+                font-size: 1.8rem;
+
+                @include c575-block {
+                    font-size: 1.4rem;
+                }
+            }
+
+            &_mini {
+                @include c575-block {
+                    font-size: 1.4rem;
+                }
+            }
+
+            &-wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 60px;
+            }
+        }
+    }
+}
