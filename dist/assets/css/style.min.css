@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@100;400;500;700&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -1121,3 +1121,404 @@ button {
     top: 0;
     opacity: 1;
     z-index: 100; } }
+
+.mat-container {
+  display: flex;
+  max-width: 745px;
+  width: 100%;
+  margin: 155px auto;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  justify-content: space-between; }
+
+.mat-col {
+  flex-basis: 46%; }
+
+.mat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; }
+  .mat-row > * {
+    flex-basis: 48.5%; }
+
+.mat-card {
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24); }
+
+.mat-image-placeholder {
+  padding: 15px 18px;
+  display: flex;
+  color: #fff;
+  font-size: 24px;
+  align-items: flex-end;
+  background-color: rgba(0, 0, 0, 0.25); }
+  .mat-image-placeholder_primary {
+    background-color: #009688; }
+  .mat-image-placeholder_secondary {
+    background-color: #00bbd3; }
+  .mat-image-placeholder_tertiary {
+    background-color: #3e50b4; }
+  .mat-image-placeholder_dark {
+    background-color: #455a64; }
+
+.mat-paragraph {
+  font-size: 14px;
+  line-height: 24px;
+  margin: 7px 0; }
+
+.mat-divider {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.12); }
+
+.mat-button {
+  text-transform: uppercase;
+  padding: 10px 16px 9px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  transition: 0.3s;
+  border: none;
+  font-family: inherit;
+  border-radius: 2px; }
+  .mat-button_flat {
+    color: #009688;
+    background-color: transparent; }
+    .mat-button_flat:active {
+      background-color: rgba(153, 153, 153, 0.2); }
+    .mat-button_flat:disabled {
+      color: rgba(0, 0, 0, 0.38); }
+  .mat-button_raised {
+    color: #fff;
+    background-color: #009688; }
+    .mat-button_raised:active {
+      box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.12), 0px 8px 8px rgba(0, 0, 0, 0.24);
+      background-color: #39a298; }
+    .mat-button_raised:disabled {
+      background-color: #c5c5c5;
+      color: rgba(0, 0, 0, 0.38); }
+  .mat-button_normal {
+    text-transform: none; }
+
+.mat-icon-button {
+  border: none;
+  background-color: transparent;
+  height: 24px;
+  width: 24px;
+  line-height: 1;
+  border-radius: 50%;
+  color: #737373; }
+  .mat-icon-button + .mat-icon-button {
+    margin-left: 22px; }
+  .mat-icon-button_light {
+    color: #fff; }
+
+.mat-title {
+  color: #000;
+  font-size: 24px;
+  line-height: 32px; }
+  .mat-title_primary {
+    color: #009688; }
+
+.mat-subscription {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 14px;
+  line-height: 20px; }
+
+.mat-icon {
+  font-size: 18px;
+  line-height: 24px; }
+
+.mat-data-ticket {
+  color: #000;
+  background-color: rgba(0, 0, 0, 0.25); }
+  .mat-data-ticket_tertiary {
+    background-color: #3e50b4;
+    color: #fff; }
+  .mat-data-ticket__body {
+    padding: 18px 30px 18px 16px; }
+  .mat-data-ticket__title {
+    font-size: 24px;
+    margin-bottom: 10px; }
+  .mat-data-ticket__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px 10px 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12); }
+  .mat-data-ticket__date {
+    font-size: 12px;
+    line-height: 15px; }
+
+.mat-dialog {
+  max-width: 640px;
+  border-radius: 2px;
+  box-shadow: 0px 15px 12px rgba(0, 0, 0, 0.22), 0px 19px 38px rgba(0, 0, 0, 0.3);
+  padding: 20px 16px 16px 24px;
+  position: relative;
+  margin: 50px auto; }
+  .mat-dialog__close {
+    position: absolute;
+    top: 24px;
+    right: 24px; }
+  .mat-dialog__title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 12px;
+    color: rgba(0, 0, 0, 0.87); }
+  .mat-dialog__body {
+    padding-bottom: 26px;
+    width: 85%; }
+  .mat-dialog__paragraph {
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 0.54);
+    font-weight: 400;
+    margin-bottom: 10px; }
+  .mat-dialog__footer {
+    text-align: right; }
+
+.mat-keyboard {
+  width: 360px;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 25px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.24), 0px 0px 2px rgba(0, 0, 0, 0.12); }
+  .mat-keyboard.light {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); }
+  .mat-keyboard__suggestions {
+    padding: 12px 10px 8px;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center; }
+    .mat-keyboard__suggestions__word {
+      padding: 6px 15px;
+      display: inline-block; }
+      .mat-keyboard__suggestions__word_bold {
+        font-weight: 500; }
+  .mat-keyboard__body {
+    padding: 27px 5px 8px 10px; }
+  .mat-keyboard__letters {
+    margin-bottom: 23px; }
+  .mat-keyboard__line {
+    display: flex;
+    justify-content: space-between; }
+    .mat-keyboard__line:not(:first-child) {
+      margin-top: 25px; }
+    .mat-keyboard__line_two {
+      padding: 0 17px; }
+    .mat-keyboard__line_three {
+      padding: 0 13px; }
+  .mat-keyboard__letter, .mat-keyboard__icon-btn {
+    border: none;
+    background-color: transparent;
+    line-height: inherit;
+    width: 30px;
+    height: 25px; }
+  .mat-keyboard__last-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 5px; }
+  .mat-keyboard__space {
+    border: none;
+    width: 150px;
+    height: 24px;
+    border-radius: 2px; }
+  .mat-keyboard__enter {
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: #4cb5ab;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.02), 0px 2px 2px rgba(0, 0, 0, 0.24), 0px 0px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 50%; }
+  .mat-keyboard__digit {
+    border: none;
+    background-color: transparent;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px; }
+
+.mat-checkbox__control:not(:last-child) {
+  margin-bottom: 16px; }
+
+.mat-checkbox__layout {
+  display: flex;
+  align-items: center; }
+  .mat-checkbox__layout:hover {
+    cursor: pointer; }
+
+.mat-checkbox__checkbox {
+  position: relative;
+  margin-right: 11px;
+  display: inline-block;
+  line-height: 0;
+  height: 18px;
+  width: 18px;
+  border-radius: 2px;
+  border: 2px solid #eee;
+  box-sizing: border-box; }
+
+.mat-checkbox__input {
+  border: none;
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  bottom: 0;
+  left: 50%; }
+  .mat-checkbox__input:checked + .mat-checkbox__checked {
+    opacity: 1; }
+
+.mat-checkbox__checked {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 18px;
+  height: 18px;
+  border-radius: 2px;
+  background-color: #009688;
+  opacity: 0;
+  transition: 0.3s; }
+
+.safari {
+  margin-bottom: 32px; }
+  .safari__image-placeholder {
+    height: 176px;
+    box-sizing: border-box; }
+  .safari__body {
+    padding: 10px 18px; }
+  .safari__footer {
+    padding: 8px; }
+
+.pooch {
+  display: flex;
+  margin-bottom: 32px; }
+  .pooch__aside {
+    flex-basis: 26%; }
+  .pooch__image-placeholder {
+    height: 100%; }
+  .pooch__content {
+    flex-grow: 1; }
+  .pooch__body {
+    padding: 10px 18px; }
+  .pooch__title {
+    margin-bottom: 8px; }
+  .pooch__footer {
+    padding: 5px 5px 10px 5px; }
+
+.welcome__body {
+  padding: 22px 18px; }
+
+.welcome__title {
+  margin-bottom: 10px; }
+
+.welcome__question {
+  font-size: 16px;
+  line-height: 24px;
+  max-width: 210px;
+  display: inline-block;
+  margin-bottom: 27px; }
+
+.welcome__footer {
+  padding: 8px; }
+
+.homes {
+  margin-bottom: 25px; }
+  .homes__image-placeholder {
+    height: 176px;
+    box-sizing: border-box; }
+  .homes__footer {
+    padding: 12px 16px;
+    text-align: right; }
+
+.road-trips, .airlines {
+  margin-bottom: 25px; }
+  .road-trips__image-placeholder, .airlines__image-placeholder {
+    height: 168px;
+    box-sizing: border-box; }
+  .road-trips__footer, .airlines__footer {
+    padding: 12px;
+    text-align: center; }
+
+.clean {
+  margin-top: 10px; }
+  .clean__image-placeholder {
+    height: 56px;
+    box-sizing: border-box; }
+
+.groceries {
+  background-color: #36474f;
+  color: #fff; }
+  .groceries__body {
+    padding: 15px 13px; }
+  .groceries__title {
+    font-weight: 100;
+    margin-bottom: 20px; }
+  .groceries__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 8px 8px 8px 16px; }
+  .groceries__icon {
+    font-size: 20px; }
+
+.btn-block {
+  text-align: center;
+  margin-bottom: 65px; }
+
+.keyboard-block {
+  display: flex;
+  justify-content: space-between;
+  max-width: 745px;
+  margin: 0 auto 50px; }
+  .keyboard-block .light .mat-keyboard__suggestions {
+    background-color: #e4e7e8; }
+    .keyboard-block .light .mat-keyboard__suggestions__word {
+      color: #5a676e; }
+      .keyboard-block .light .mat-keyboard__suggestions__word:not(:first-child) {
+        border-left: 1px solid #d5d9db; }
+      .keyboard-block .light .mat-keyboard__suggestions__word_bold {
+        color: #37474f; }
+  .keyboard-block .light .mat-keyboard__body {
+    border-top: 1px solid #f5f7f8;
+    background-color: #eceff0; }
+  .keyboard-block .light .mat-keyboard__letter {
+    color: #37474f; }
+  .keyboard-block .light .mat-keyboard__icon-btn > * {
+    fill: #37474f; }
+  .keyboard-block .light .mat-keyboard__space {
+    background-color: #d1d6d8; }
+  .keyboard-block .light .mat-keyboard__digit {
+    color: #5b696f; }
+  .keyboard-block .dark .mat-keyboard__suggestions {
+    background-color: #20272b; }
+    .keyboard-block .dark .mat-keyboard__suggestions__word {
+      color: #d2d4d5; }
+      .keyboard-block .dark .mat-keyboard__suggestions__word:not(:first-child) {
+        border-left: 1px solid #41474b; }
+      .keyboard-block .dark .mat-keyboard__suggestions__word_bold {
+        color: #fff; }
+  .keyboard-block .dark .mat-keyboard__body {
+    border-top: 1px solid #93989b;
+    background-color: #263238; }
+  .keyboard-block .dark .mat-keyboard__letter {
+    color: #d4d6d7; }
+  .keyboard-block .dark .mat-keyboard__icon-btn > * {
+    fill: #a8adaf; }
+  .keyboard-block .dark .mat-keyboard__space {
+    background-color: #3c464c; }
+  .keyboard-block .dark .mat-keyboard__digit {
+    color: #d4d6d7; }

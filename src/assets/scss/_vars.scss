@@ -13,3 +13,64 @@ $bgColor: #f7f7f7;
 // COLORS
 
 $box-shadow: 0px 25px 100px $shadowColor;
+
+
+// UI-KIT
+$primaryImagePlaceholderColor: #009688;
+$secondaryImagePlaceholderColor: #00bbd3;
+$tertiaryImagePlaceholderColor: #3e50b4;
+$darkImagePlaceholderColor: #455a64;
+
+$primaryUIColor: #009688;
+$tertiaryUIColor: #3e50b4;
+
+// Color themes
+$themesColors: (
+    (light, #d1d6d8, #37474f, #37474f, #eceff0, #e4e7e8, #5a676e, #37474f, #d5d9db, #f5f7f8, #5b696f),
+    (dark, #3c464c, #a8adaf, #d4d6d7, #263238, #20272b, #d2d4d5, #fff, #41474b, #93989b, #d4d6d7)
+);
+
+@mixin theme($name, $space, $icon, $letter, $bodyBg, $sugBg, $word, $wordBold, $divider, $bodyBorder, $digit) {
+    .#{$name} {
+        .mat-keyboard {
+            &__suggestions {
+                background-color: $sugBg;
+
+                &__word {
+                    color: $word;
+
+                    &:not(:first-child) {
+                        border-left: 1px solid $divider;
+                    }
+
+                    &_bold {
+                        color: $wordBold;
+                    }
+                }
+            }
+
+            &__body {
+                border-top: 1px solid $bodyBorder;
+                background-color: $bodyBg;
+            }
+
+            &__letter {
+                color: $letter;
+            }
+
+            &__icon-btn {
+                & > * {
+                    fill: $icon
+                }
+            }
+
+            &__space {
+                background-color: $space;
+            }
+
+            &__digit {
+                color: $digit;
+            }
+        }
+    }
+}

@@ -1,0 +1,531 @@
+.mat {
+
+    &-container {
+        display: flex;
+        max-width: 745px;
+        width: 100%;
+        margin: 155px auto;
+        @include roboto(400);
+        font-size: 14px;
+        justify-content: space-between;
+    }
+
+    &-col {
+        flex-basis: 46%;
+    }
+
+    &-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        & > * {
+            flex-basis: 48.5%;
+        }
+    }
+
+    &-card {
+        border-radius: 3px;
+        overflow: hidden;
+        box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
+    }
+
+    &-image-placeholder {
+        padding: 15px 18px;
+        display: flex;
+        color: #fff;
+        font-size: 24px;
+        align-items: flex-end;
+        background-color: rgba(#000, 0.25);
+
+        &_primary {
+            background-color: $primaryImagePlaceholderColor;
+        }
+
+        &_secondary {
+            background-color: $secondaryImagePlaceholderColor;
+        }
+
+        &_tertiary {
+            background-color: $tertiaryImagePlaceholderColor;    
+        }
+
+        &_dark {
+            background-color: $darkImagePlaceholderColor;
+        }
+
+    }
+
+    &-paragraph {
+        font-size: 14px;
+        line-height: 24px;
+        margin: 7px 0;
+    }
+
+    &-divider {
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: rgba(#000, 0.12);
+    }
+
+    &-button {
+        text-transform: uppercase;
+        padding: 10px 16px 9px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        transition: 0.3s;
+        border: none;
+        font-family: inherit;
+        border-radius: 2px;
+
+        &_flat {
+            color: $primaryUIColor;
+            background-color: transparent;
+
+            &:active {
+                background-color: rgba(#999, 0.2);
+            }
+
+            &:disabled {
+                color: rgba(#000, 0.38);
+            }
+        }
+
+        &_raised {
+            color: #fff;
+            background-color: $primaryUIColor;
+
+            &:active {
+                box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.12), 0px 8px 8px rgba(0, 0, 0, 0.24);
+                background-color: lighten(desaturate($primaryUIColor, 52.05), 13.53)
+            }
+
+            &:disabled {
+                background-color: #c5c5c5;
+                color: rgba(#000, 0.38);
+            }
+        }
+
+        &_normal {
+            text-transform: none;
+        }
+    }
+
+    &-icon-button {
+        border: none;
+        background-color: transparent;
+        height: 24px;
+        width: 24px;
+        line-height: 1;
+        border-radius: 50%;
+        color: #737373;
+
+        & + & {
+            margin-left: 22px;
+        }
+
+        &_light {
+            color: #fff;
+        }
+    }
+
+    &-title {
+        color: #000;
+        font-size: 24px;
+        line-height: 32px;
+
+        &_primary {
+            color: $primaryUIColor;
+        }
+    }
+
+    &-subscription {
+        color: rgba(#000, 0.54);
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    &-icon {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    &-data-ticket {
+        color: #000;
+        background-color: rgba(#000, 0.25);
+
+        &_tertiary {
+            background-color: $tertiaryUIColor;
+            color: #fff;
+        }
+
+        &__body {
+            padding: 18px 30px 18px 16px;
+        }
+
+        &__title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        &__footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 10px 10px 16px;
+            border-top: 1px solid rgba(#fff, 0.12);
+        }
+
+        &__date {
+            font-size: 12px;
+            line-height: 15px;
+        }
+    }
+
+    &-dialog {
+        max-width: 640px;
+        border-radius: 2px;
+        box-shadow: 0px 15px 12px rgba(0, 0, 0, 0.22), 0px 19px 38px rgba(0, 0, 0, 0.3);
+        padding: 20px 16px 16px 24px;
+        position: relative;
+        margin: 50px auto;
+
+        &__close {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+        }
+
+        &__title {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 24px;
+            margin-bottom: 12px;
+            color: rgba(#000, 0.87);
+        }
+
+        &__body {
+            padding-bottom: 26px;
+            width: 85%;
+        }
+
+        &__paragraph {
+            font-size: 16px;
+            line-height: 24px;
+            color: rgba(#000, 0.54);
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+
+        &__footer {
+            text-align: right;
+        }
+    }
+
+    &-keyboard {
+        width: 360px;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 25px;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.24), 0px 0px 2px rgba(0, 0, 0, 0.12);
+
+        &.light {
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        }
+
+        &__suggestions {
+            padding: 12px 10px 8px;
+            font-size: 14px;
+            line-height: 16px;
+            text-align: center;
+
+            &__word {
+                padding: 6px 15px;
+                display: inline-block;
+
+                &_bold {
+                    font-weight: 500;
+                }
+            }
+        }
+
+        &__body {
+            padding: 27px 5px 8px 10px;
+        }
+
+        &__letters {
+            margin-bottom: 23px;
+        }
+
+        &__line {
+            display: flex;
+            justify-content: space-between;
+
+            &:not(:first-child) {
+                margin-top: 25px;
+            }
+
+            &_two {
+                padding: 0 17px;
+            }
+
+            &_three {
+                padding: 0 13px;
+            }
+        }
+
+        &__letter, &__icon-btn {
+            border: none;
+            background-color: transparent;
+            line-height: inherit;
+            width: 30px;
+            height: 25px;
+        }
+
+        &__last-line {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-right: 5px;
+        }
+
+        &__space {
+            border: none;
+            width: 150px;
+            height: 24px;
+            border-radius: 2px;
+        }
+
+        &__enter {
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background-color: #4cb5ab;
+            box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.02), 0px 2px 2px rgba(0, 0, 0, 0.24), 0px 0px 2px rgba(0, 0, 0, 0.12);
+            border-radius: 50%;
+        }
+
+        &__digit {
+            border: none;
+            background-color: transparent;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+        }
+    }
+
+    &-checkbox {
+        &__control {
+            &:not(:last-child) {
+                margin-bottom: 16px;
+            }
+        }
+
+        &__layout {
+            display: flex;
+            align-items: center;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        &__checkbox {
+            position: relative;
+            margin-right: 11px;
+            display: inline-block;
+            line-height: 0;
+            height: 18px;
+            width: 18px;
+            border-radius: 2px;
+            border: 2px solid #eee;
+            box-sizing: border-box;
+        }
+
+        &__input {
+            border: none;
+            height: 1px;
+            width: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+
+            &:checked {
+                & + .mat-checkbox__checked {
+                    opacity: 1;
+                }
+            }
+        }
+
+        &__checked {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            width: 18px;
+            height: 18px;
+            border-radius: 2px;
+            background-color: $primaryUIColor;
+            opacity: 0;
+            transition: 0.3s;
+        }
+    }
+    
+}
+
+
+.safari {
+    margin-bottom: 32px;
+
+    &__image-placeholder {
+        height: 176px;
+        box-sizing: border-box;
+    }
+
+    &__body {
+        padding: 10px 18px;
+    }
+
+    &__footer {
+        padding: 8px;
+    }
+}
+
+.pooch {
+    display: flex;
+    margin-bottom: 32px;
+
+    &__aside {
+        flex-basis: 26%;
+    }
+
+    &__image-placeholder {
+        height: 100%;
+    }
+
+    &__content {
+        flex-grow: 1;
+    }
+
+    &__body {
+        padding: 10px 18px;
+    }
+
+    &__title {
+        margin-bottom: 8px;
+    }
+
+    &__footer {
+        padding: 5px 5px 10px 5px;
+    }
+}
+
+.welcome {
+    &__body {
+        padding: 22px 18px;
+    }
+
+    &__title {
+        margin-bottom: 10px;
+    }
+
+    &__question {
+        font-size: 16px;
+        line-height: 24px;
+        max-width: 210px;
+        display: inline-block;
+        margin-bottom: 27px;
+    }
+
+    &__footer {
+        padding: 8px;
+    }
+}
+
+.homes {
+    margin-bottom: 25px;
+
+    &__image-placeholder {
+        height: 176px;
+        box-sizing: border-box;
+    }
+
+    &__footer {
+        padding: 12px 16px;
+        text-align: right;
+    }
+}
+
+.road-trips, .airlines {
+    margin-bottom: 25px;
+
+    &__image-placeholder {
+        height: 168px;
+        box-sizing: border-box;
+    }
+
+    &__footer {
+        padding: 12px;
+        text-align: center;
+    }
+}
+
+.clean {
+    margin-top: 10px;
+
+    &__image-placeholder {
+        height: 56px;
+        box-sizing: border-box;
+    }
+}
+
+.groceries {
+    background-color: #36474f;
+    color: #fff;
+
+    &__body {
+        padding: 15px 13px;
+    }
+
+    &__title {
+        font-weight: 100;
+        margin-bottom: 20px;
+    }
+
+    &__footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid rgba(#fff, 0.12);
+        padding: 8px 8px 8px 16px;
+    }
+
+    &__icon {
+        font-size: 20px;
+    }
+}
+
+.btn-block {
+    text-align: center;
+    margin-bottom: 65px;
+}
+
+.keyboard-block {
+    display: flex;
+    justify-content: space-between;
+    max-width: 745px;
+    margin: 0 auto 50px;
+
+    @each $name, $space, $icon, $letter, $bodyBg, $sugBg, $word, $wordBold, $divider, $bodyBorder, $digit in $themesColors {
+        @include theme($name, $space, $icon, $letter, $bodyBg, $sugBg, $word, $wordBold, $divider, $bodyBorder, $digit);
+    }
+}
