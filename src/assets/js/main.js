@@ -13,8 +13,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     
-    let disableScrollFn/* = disableScroll.bind(window, height)*/;
+    let disableScrollFn;
 
+    // Открытие popup
     openPopupBtn.map(elem => {
         elem.addEventListener('click', function() {
             const popupName = this.dataset.popup;
@@ -71,6 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Скрытие popup
     activePopup.forEach(elem => {
         elem.addEventListener('click', function(e) {
 
@@ -231,11 +233,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             showSlides(nextIdx);
         }, 600);
-    }
-
-    // Текущий слайдер
-    function currentSlide(idx) {
-        showSlides(slideIndex = idx);
     }
 
     function showSlides(idx) {
